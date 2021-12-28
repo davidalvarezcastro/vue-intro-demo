@@ -1,5 +1,7 @@
 # app2
 
+El objetivo de este proyecto es mostrar cómo crear un proyecto utilizando Vue CLI y añadir "plugins". 
+
 ## Project setup
 ```
 npm install
