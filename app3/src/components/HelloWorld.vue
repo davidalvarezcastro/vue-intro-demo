@@ -22,6 +22,9 @@
       :country="user.country"
       :age="user.age"
     />
+
+    Nº users: {{ users.length }}
+    Sum ages: {{ sumAges }}
   </div>
 </template>
 
@@ -68,7 +71,13 @@ export default {
       object.time = (new Date()).toLocaleString();
     };
 
+    // service
     let users = reactive([]); // user list from api call
+    const sumAges = computed(() => {
+      return users.reduce((sum, u) => {
+        return sum + u.age
+      }, 0)
+    });
 
     // lyfecycle hooks
     onBeforeMount(() => {
@@ -112,6 +121,7 @@ export default {
     // return
     return {
       users,
+      sumAges,
       object,
       update,
       formattedcount,

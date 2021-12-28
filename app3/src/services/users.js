@@ -1,6 +1,7 @@
 const USERS = [
   {name: "David", surname: "Alvarez", country: "Spain", age: 24},
-  {name: "Pepe", surname: "Gomez", country: "Spain", age: 28},
+  {name: "Pepe", surname: "Gomez", country: "Spain", age: 17},
+  {name: "Masahiro", surname: "Tanaka", country: "Japan", age: 15},
   {name: "Jing", surname: "Chen", country: "China", age: 25}
 ];
 

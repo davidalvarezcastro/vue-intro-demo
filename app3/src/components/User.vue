@@ -4,7 +4,7 @@
     <div class="card">
       <h1>{{ fullName }}</h1>
       <h1>{{ country }}</h1>
-      <h1>{{ age }}</h1>
+      <h1>{{ age }} <span v-if="isYoung"> (TEEN) </span></h1>
     </div>
   </div>
 </template>
@@ -26,8 +26,11 @@ export default {
   setup(props) {
     const fullName = computed(() => `${props.name} ${props.surname}`);
 
+    const isYoung = computed(() => props.age <= 18 );
+
     // return
     return {
+      isYoung,
       fullName
     }
   }
