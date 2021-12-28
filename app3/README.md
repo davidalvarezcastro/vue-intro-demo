@@ -1,5 +1,14 @@
 # app3
 
+El objetivo de este proyecto es mostrar algunas de las funcionalidades de Vue más en profundidad:
+
+- componentes
+  - organización
+- reactividad
+- lifecycle hook
+- bucles
+
+
 ## Project setup
 ```
 npm install
