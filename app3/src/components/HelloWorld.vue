@@ -33,6 +33,7 @@ import {
   onRenderTriggered,
 } from 'vue'
 import User from './User.vue';
+import { getUsersService } from '../services/users';
 
 export default {
   name: 'HelloWorld',
@@ -67,19 +68,21 @@ export default {
       object.time = (new Date()).toLocaleString();
     };
 
-    let users = reactive([
-      {name: "David", surname: "Alvarez", country: "Spain", age: 24},
-      {name: "Pepe", surname: "Gomez", country: "Spain", age: 28},
-      {name: "Jing", surname: "Chen", country: "China", age: 25},
-    ]);
+    let users = reactive([]); // user list from api call
 
     // lyfecycle hooks
     onBeforeMount(() => {
       console.log('onBeforeMount')
     });
 
-    onMounted(() => {
+    onMounted(async () => {
       console.log('onMounted')
+
+      try {
+        Object.assign(users, await getUsersService());
+      } catch (error) {
+        console.log('error fetching data from user service ')
+      }
     });
 
     onBeforeUpdate(() => {
