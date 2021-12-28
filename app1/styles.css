@@ -1,0 +1,19 @@
+body {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+#tablero {
+    border: 10px ridge orange;
+}
+
+#boton {
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+}

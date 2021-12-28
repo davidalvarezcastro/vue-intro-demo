@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tres en raya by IAV</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>"Pruebas Canvas IAV"</h1>
+        <canvas id="tablero" width="960px" height="500px">
+            Tu navegador no soporta Canvas.
+        </canvas>
+        <button id="boton" type="reset" onclick="iniciar();">Volver a Jugar!</button>
+
+        <div id="app">
+            Vicctorias {{ victorias }}
+        </div>
+    </body>
+</html>
+
+
+<script>
+    window.app = new Vue({
+        el: '#app',
+        data: {
+            victorias: 0
+        }
+    })
+</script>
